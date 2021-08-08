@@ -6,8 +6,7 @@ This is going to be an app that can perform several actions on Spigot Minecraft 
 
 Project hasn't started yet. I have only mockups at the moment.
 
-![](./assets/Main Screen.png)
-![](./assets/Whitelist tab deactivated.png)
-![](./assets/Whitelist tab activated.png)
-![](./assets/Active players_Banned Tab.png)
-
+![](./assets/main-screen.png)
+![](./assets/whitelist-tab-deactivated.png)
+![](./assets/whitelist-tab-activated.png)
+![](./assets/active-players-and-banned-tab.png)
