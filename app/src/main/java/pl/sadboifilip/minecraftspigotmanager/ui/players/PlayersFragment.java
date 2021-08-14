@@ -12,9 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentMainBinding;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+
 public class PlayersFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";

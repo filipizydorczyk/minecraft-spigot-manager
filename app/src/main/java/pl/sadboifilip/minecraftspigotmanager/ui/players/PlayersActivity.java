@@ -1,4 +1,4 @@
-package pl.sadboifilip.minecraftspigotmanager;
+package pl.sadboifilip.minecraftspigotmanager.ui.players;
 
 import android.os.Bundle;
 
@@ -8,18 +8,17 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import pl.sadboifilip.minecraftspigotmanager.ui.players.SectionsPagerAdapter;
-import pl.sadboifilip.minecraftspigotmanager.databinding.ActivityMainBinding;
+import pl.sadboifilip.minecraftspigotmanager.databinding.ActivityPlayersBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class PlayersActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityPlayersBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityPlayersBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
