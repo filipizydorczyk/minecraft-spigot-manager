@@ -1,4 +1,4 @@
-package pl.sadboifilip.minecraftspigotmanager.ui.main;
+package pl.sadboifilip.minecraftspigotmanager.ui.players;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

@@ -1,4 +1,4 @@
-package pl.sadboifilip.minecraftspigotmanager.ui.main;
+package pl.sadboifilip.minecraftspigotmanager.ui.players;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import pl.sadboifilip.minecraftspigotmanager.R;
 import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentMainBinding;
 
 /**
