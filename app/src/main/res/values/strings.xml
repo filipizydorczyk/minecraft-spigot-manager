@@ -3,4 +3,5 @@
     <string name="tab_players_active">Active players</string>
     <string name="tab_players_whitelisted">Whitelisted players</string>
     <string name="tab_players_banned">Banned players</string>
+    <string name="button_players_activity">Show players</string>
 </resources>
