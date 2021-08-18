@@ -5,16 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:id="@+id/listitem_players"
+    android:paddingVertical="5dp"
     >
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:src="@drawable/ic_baseline_person_24"
+        android:paddingHorizontal="5dp"
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight = "1"
@@ -23,7 +25,7 @@
             android:id="@+id/listitem_players__name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="11sp"
+            android:textSize="18sp"
             android:text="Name"/>
 
         <TextView
@@ -31,7 +33,7 @@
             android:id="@+id/listitem_players__role"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="6sp"
+            android:textSize="11sp"
             android:text="Role"/>
     </LinearLayout>
 
