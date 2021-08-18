@@ -11,6 +11,7 @@ import pl.sadboifilip.minecraftspigotmanager.data.models.ServerRoles;
 
 /**
  * Repository that gets data with REST API calls
+ * @author filip
  */
 public class ServerDataRepository {
 

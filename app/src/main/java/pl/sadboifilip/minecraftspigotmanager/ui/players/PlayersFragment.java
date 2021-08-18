@@ -4,21 +4,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import pl.sadboifilip.minecraftspigotmanager.R;
+import pl.sadboifilip.minecraftspigotmanager.data.viewmodels.OnlinePlayersViewModel;
 import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentMainBinding;
+import pl.sadboifilip.minecraftspigotmanager.ui.adapters.PlayersInfoAdapter;
 
 
 public class PlayersFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PlayersViewModel pageViewModel;
     private FragmentMainBinding binding;
+    private OnlinePlayersViewModel viewModel;
 
     public static PlayersFragment newInstance(int index) {
         PlayersFragment fragment = new PlayersFragment();
@@ -31,12 +33,7 @@ public class PlayersFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = new ViewModelProvider(this).get(PlayersViewModel.class);
-        int index = 1;
-        if (getArguments() != null) {
-            index = getArguments().getInt(ARG_SECTION_NUMBER);
-        }
-        pageViewModel.setIndex(index);
+        this.viewModel = new ViewModelProvider(this, new OnlinePlayersViewModel.OnlinePlayersViewModelFactory(getActivity().getApplication())).get(OnlinePlayersViewModel.class);
     }
 
     @Override
@@ -46,6 +43,13 @@ public class PlayersFragment extends Fragment {
 
         binding = FragmentMainBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        this.viewModel.getOnlinePlayers().observe(getViewLifecycleOwner(),players -> {
+            if(players != null){
+                final PlayersInfoAdapter adapter =  new PlayersInfoAdapter(getActivity(), R.layout.listelement_player, players);
+                binding.listviewPlayers.setAdapter(adapter);
+            }
+        });
 
         return root;
     }
