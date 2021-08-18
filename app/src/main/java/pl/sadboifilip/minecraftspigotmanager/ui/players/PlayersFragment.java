@@ -47,8 +47,6 @@ public class PlayersFragment extends Fragment {
         binding = FragmentMainBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.sectionLabel;
-        pageViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText(s));
         return root;
     }
 

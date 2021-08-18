@@ -23,7 +23,8 @@ public class ServerDataRepository {
                 new PlayerInfo("izak", ServerRoles.NORMAL_PLAYER),
                 new PlayerInfo("pasha", ServerRoles.WHITELISTED_PLAYER),
                 new PlayerInfo("vlauder", ServerRoles.OP_PLAYER),
-                new PlayerInfo("clokec", ServerRoles.BANNED_PLAYER));
+                new PlayerInfo("clokec", ServerRoles.BANNED_PLAYER)
+        );
     }
 
     /**
