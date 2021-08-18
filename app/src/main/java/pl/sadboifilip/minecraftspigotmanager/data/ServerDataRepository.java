@@ -1,11 +1,13 @@
 package pl.sadboifilip.minecraftspigotmanager.data;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
 import pl.sadboifilip.minecraftspigotmanager.data.models.PlayerInfo;
 import pl.sadboifilip.minecraftspigotmanager.data.models.ServerLogs;
+import pl.sadboifilip.minecraftspigotmanager.data.models.ServerRoles;
 
 /**
  * Repository that gets data with REST API calls
@@ -16,7 +18,12 @@ public class ServerDataRepository {
      * @return list of info about players that are logged in
      */
     public List<PlayerInfo> getOnlinePlayers(){
-        return new ArrayList<>();
+        return Arrays.asList(
+                new PlayerInfo("shorud", ServerRoles.OP_PLAYER),
+                new PlayerInfo("izak", ServerRoles.NORMAL_PLAYER),
+                new PlayerInfo("pasha", ServerRoles.WHITELISTED_PLAYER),
+                new PlayerInfo("vlauder", ServerRoles.OP_PLAYER),
+                new PlayerInfo("clokec", ServerRoles.BANNED_PLAYER));
     }
 
     /**
