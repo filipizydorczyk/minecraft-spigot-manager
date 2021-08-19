@@ -11,6 +11,11 @@ I have implemented most views with mocked data. When it will be done wi will rep
 ## Layout naming
 
 In order to have layouts sorted by categories each one layout file I name with given schema `category_name.xml` for example `activity_main.xml` for main activity or `listelement_player.xml` for layout to put in `ListView` of players.
+To do:
+ - [ ] Token encryption
+ - [ ] Styles
+ - [ ] move layouts values to `values` directory
+ - [ ] logs coloring
 
 ## View models
 
