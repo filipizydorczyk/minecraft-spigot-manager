@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences preferences = this.getPreferences(Context.MODE_PRIVATE);
         final String url = preferences.getString(SERVER_URL,"http://localhost:7000");
         final String token = preferences.getString(SERVER_TOKEN,"94a7b26c-7f4c-44a1-8c8b-b5db49a824e6");
-        // TODO Add token encryption
+        // TODO Add token decryption
 
         this.binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(this.binding.getRoot());
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             editor.putString(SERVER_URL,this.binding.activityMainUrl.getText().toString());
             editor.putString(SERVER_TOKEN,this.binding.activityMainToken.getText().toString());
             editor.apply();
+            // TODO Add token encryption
 
             Toast toast = Toast.makeText(getApplicationContext(), SERVER_INFO_SAVE_MESSAGE, Toast.LENGTH_SHORT);
             toast.show();
-
         });
 
         this.binding.activityMainUrl.setText(url);
