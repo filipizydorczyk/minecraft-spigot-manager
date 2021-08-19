@@ -12,9 +12,9 @@ import pl.sadboifilip.minecraftspigotmanager.databinding.ActivityMainBinding;
 import pl.sadboifilip.minecraftspigotmanager.ui.players.PlayersActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static String SERVER_URL = "server_url";
-    private static String SERVER_TOKEN = "server_token";
-    private static String SERVER_INFO_SAVE_MESSAGE = "Server creds successfully saved!";
+    private final static String SERVER_URL = "server_url";
+    private final static String SERVER_TOKEN = "server_token";
+    private final static String SERVER_INFO_SAVE_MESSAGE = "Server creds successfully saved!";
 
     private ActivityMainBinding binding;
 
