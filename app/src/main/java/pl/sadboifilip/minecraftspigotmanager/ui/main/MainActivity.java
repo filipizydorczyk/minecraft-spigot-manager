@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         this.viewModel.getServerLogs().observe(this, logs -> {
             if(logs != null){
                 this.binding.activityMainTextViewLogs.setText(logs.getLogs());
+                this.binding.activityMainLogsDate.setText(logs.getDate().toString());
             }
         });
     }

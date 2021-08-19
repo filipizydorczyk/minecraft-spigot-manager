@@ -39,7 +39,7 @@
             android:id="@+id/activity_main__url"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:inputType="text"/>
+            android:inputType="textUri"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,14 +66,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_gravity="bottom"
             >
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_logs"
-                android:layout_weight = "1"
                 android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/activity_main__logs_date"
+                android:layout_height="wrap_content"
+                android:text="(time)"
+                android:textSize="10dp"
+                android:layout_weight = "1"
+                android:paddingLeft="5dp"
                 />
             <ImageView
                 android:layout_width="wrap_content"
