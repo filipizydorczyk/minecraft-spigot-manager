@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
+import pl.sadboifilip.minecraftspigotmanager.data.viewmodels.OnlinePlayersViewModel;
+import pl.sadboifilip.minecraftspigotmanager.data.viewmodels.ServerInfoViewModel;
 import pl.sadboifilip.minecraftspigotmanager.databinding.ActivityMainBinding;
 import pl.sadboifilip.minecraftspigotmanager.ui.players.PlayersActivity;
 
@@ -17,10 +20,12 @@ public class MainActivity extends AppCompatActivity {
     private final static String SERVER_INFO_SAVE_MESSAGE = "Server creds successfully saved!";
 
     private ActivityMainBinding binding;
+    private ServerInfoViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.viewModel = new ViewModelProvider(this, new ServerInfoViewModel.ServerInfoViewModelFactory(getApplication())).get(ServerInfoViewModel.class);
 
         final SharedPreferences preferences = this.getPreferences(Context.MODE_PRIVATE);
         final String url = preferences.getString(SERVER_URL,"http://localhost:7000");
@@ -47,5 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
         this.binding.activityMainUrl.setText(url);
         this.binding.activityMainToken.setText(token);
+
+        this.viewModel.getServerLogs().observe(this, logs -> {
+            if(logs != null){
+                this.binding.activityMainTextViewLogs.setText(logs.getLogs());
+            }
+        });
     }
 }

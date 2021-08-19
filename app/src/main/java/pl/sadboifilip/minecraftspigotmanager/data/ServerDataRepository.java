@@ -92,7 +92,7 @@ public class ServerDataRepository {
      * @return the newest server logs
      */
     public ServerLogs getLatestLogs(){
-        return new ServerLogs("[Time] log",new Date());
+        return new ServerLogs("[Time] log \n[Time] log2",new Date());
     }
 
 }
