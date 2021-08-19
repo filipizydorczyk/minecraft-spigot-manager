@@ -36,7 +36,7 @@
             />
 
         <EditText
-            android:id="@+id/text_input_url"
+            android:id="@+id/activity_main__url"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:inputType="text"/>
@@ -49,10 +49,11 @@
             />
 
         <EditText
-            android:id="@+id/text_input_token"
+            android:id="@+id/activity_main__token"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:inputType="text"/>
+            android:inputType="text"
+            />
 
         <Button
             android:id="@+id/button_server_info_save"

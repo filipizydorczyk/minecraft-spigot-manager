@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import pl.sadboifilip.minecraftspigotmanager.data.models.PlayerInfo;
+import pl.sadboifilip.minecraftspigotmanager.data.models.ServerInfo;
 import pl.sadboifilip.minecraftspigotmanager.data.models.ServerLogs;
 import pl.sadboifilip.minecraftspigotmanager.data.models.ServerRoles;
 
