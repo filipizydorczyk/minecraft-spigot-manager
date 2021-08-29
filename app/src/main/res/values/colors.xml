@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="ic_app_icon_background">#3DDC84</color>
+
     <color name="green_200">#75a74e</color>
     <color name="green_500">#3f9863</color>
     <color name="blue_200">#007276</color>
