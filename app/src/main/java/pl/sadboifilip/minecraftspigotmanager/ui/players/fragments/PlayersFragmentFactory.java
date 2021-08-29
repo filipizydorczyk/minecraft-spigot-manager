@@ -18,7 +18,7 @@ public class PlayersFragmentFactory {
             case 0:
                 return new ActivePlayersFragment();
             case 1:
-                return new ActivePlayersFragment();
+                return new WhitelistedPlayersFragment();
             case 2:
                 return new BannedPlayersFragment();
         }

@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/activity_main.xml" value="0.6649746192893401" />
         <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/activity_players.xml" value="0.25" />
         <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/fragment_main.xml" value="0.1484375" />
-        <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/listelement_player.xml" value="0.67" />
+        <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/fragment_players_basic.xml" value="0.409375" />
+        <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/fragment_players_whitelisted.xml" value="0.409375" />
+        <entry key="../../../../../../mnt/commondisk/filip/Documents/my_projects/software/minecraft-spigot-manager/app/src/main/res/layout/listelement_player.xml" value="0.6188976377952756" />
       </map>
     </option>
   </component>

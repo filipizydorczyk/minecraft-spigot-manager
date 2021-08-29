@@ -91,7 +91,10 @@ public class ServerDataRepository {
      * @return list of info about players that are whitelisted
      */
     public List<PlayerInfo> getWhitelistedPlayers(){
-        return new ArrayList<>();
+        return Arrays.asList(
+                new PlayerInfo("sarka", ServerRoles.WHITELISTED_PLAYER),
+                new PlayerInfo("mlody", ServerRoles.WHITELISTED_PLAYER)
+        );
     }
 
     /**

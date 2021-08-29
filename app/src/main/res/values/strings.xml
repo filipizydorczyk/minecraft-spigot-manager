@@ -8,4 +8,5 @@
     <string name="label_token">Token</string>
     <string name="button_server_info_save">Save</string>
     <string name="label_logs">Logs</string>
+    <string name="label_status">Status</string>
 </resources>

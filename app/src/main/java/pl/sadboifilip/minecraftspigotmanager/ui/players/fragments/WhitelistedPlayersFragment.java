@@ -10,20 +10,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import pl.sadboifilip.minecraftspigotmanager.R;
-import pl.sadboifilip.minecraftspigotmanager.data.viewmodels.OnlinePlayersViewModel;
-import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentPlayersBasicBinding;
+import pl.sadboifilip.minecraftspigotmanager.data.viewmodels.WhitelistedPlayersViewModel;
+import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentPlayersWhitelistedBinding;
 import pl.sadboifilip.minecraftspigotmanager.ui.adapters.PlayersInfoAdapter;
 
-
-public class ActivePlayersFragment extends Fragment {
-    private FragmentPlayersBasicBinding binding;
-    private OnlinePlayersViewModel viewModel;
+public class WhitelistedPlayersFragment extends Fragment {
+    private FragmentPlayersWhitelistedBinding binding;
+    private WhitelistedPlayersViewModel viewModel;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.viewModel = new ViewModelProvider(this, new OnlinePlayersViewModel.OnlinePlayersViewModelFactory(getActivity().getApplication())).get(OnlinePlayersViewModel.class);
+        this.viewModel = new ViewModelProvider(this, new WhitelistedPlayersViewModel.WhitelistedPlayersViewModelFactory(getActivity().getApplication())).get(WhitelistedPlayersViewModel.class);
     }
 
     @Override
@@ -31,10 +30,15 @@ public class ActivePlayersFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        binding = FragmentPlayersBasicBinding.inflate(inflater, container, false);
+        binding = FragmentPlayersWhitelistedBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        this.viewModel.getOnlinePlayers().observe(getViewLifecycleOwner(),players -> {
+        this.viewModel.isWhitelistedEnabled().observe(getViewLifecycleOwner(), isEnabled -> {
+            if(isEnabled != null){
+                binding.switchCompactWhitelistEnabled.setChecked(isEnabled);
+            }
+        });
+        this.viewModel.getWhitelistedPlayers().observe(getViewLifecycleOwner(),players -> {
             if(players != null){
                 final PlayersInfoAdapter adapter =  new PlayersInfoAdapter(getActivity(), R.layout.listelement_player, players);
                 binding.listviewPlayers.setAdapter(adapter);

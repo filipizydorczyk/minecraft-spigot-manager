@@ -11,11 +11,11 @@ import androidx.lifecycle.ViewModelProvider;
 
 import pl.sadboifilip.minecraftspigotmanager.R;
 import pl.sadboifilip.minecraftspigotmanager.data.viewmodels.BannedPlayersViewModel;
-import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentMainBinding;
+import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentPlayersBasicBinding;
 import pl.sadboifilip.minecraftspigotmanager.ui.adapters.PlayersInfoAdapter;
 
 public class BannedPlayersFragment  extends Fragment {
-    private FragmentMainBinding binding;
+    private FragmentPlayersBasicBinding binding;
     private BannedPlayersViewModel viewModel;
 
 
@@ -30,7 +30,7 @@ public class BannedPlayersFragment  extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        binding = FragmentMainBinding.inflate(inflater, container, false);
+        binding = FragmentPlayersBasicBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         this.viewModel.getBannedPlayers().observe(getViewLifecycleOwner(),players -> {
