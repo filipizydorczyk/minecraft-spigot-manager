@@ -6,7 +6,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.players.PlayersFragment">
+    tools:context=".ui.players.fragments.ActivePlayersFragment">
 
     <ListView
         android:id="@+id/listview_players"

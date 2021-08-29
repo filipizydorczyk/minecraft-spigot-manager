@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import pl.sadboifilip.minecraftspigotmanager.R;
+import pl.sadboifilip.minecraftspigotmanager.ui.players.fragments.ActivePlayersFragment;
+import pl.sadboifilip.minecraftspigotmanager.ui.players.fragments.PlayersFragmentFactory;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -23,7 +25,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return PlayersFragment.newInstance(position + 1);
+        return PlayersFragmentFactory.getPlayersFragment(position);
     }
 
     @Nullable

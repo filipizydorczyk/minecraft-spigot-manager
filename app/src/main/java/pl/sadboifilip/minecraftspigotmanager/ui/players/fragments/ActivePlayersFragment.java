@@ -1,4 +1,4 @@
-package pl.sadboifilip.minecraftspigotmanager.ui.players;
+package pl.sadboifilip.minecraftspigotmanager.ui.players.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,20 +15,10 @@ import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentMainBinding;
 import pl.sadboifilip.minecraftspigotmanager.ui.adapters.PlayersInfoAdapter;
 
 
-public class PlayersFragment extends Fragment {
-
-    private static final String ARG_SECTION_NUMBER = "section_number";
-
+public class ActivePlayersFragment extends Fragment {
     private FragmentMainBinding binding;
     private OnlinePlayersViewModel viewModel;
 
-    public static PlayersFragment newInstance(int index) {
-        PlayersFragment fragment = new PlayersFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(ARG_SECTION_NUMBER, index);
-        fragment.setArguments(bundle);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

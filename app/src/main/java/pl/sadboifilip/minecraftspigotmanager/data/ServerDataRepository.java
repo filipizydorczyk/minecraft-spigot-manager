@@ -33,7 +33,13 @@ public class ServerDataRepository {
      * @return list of info about players that are banned
      */
     public List<PlayerInfo> getBannedPlayers(){
-        return new ArrayList<>();
+        return Arrays.asList(
+                new PlayerInfo("charlie", ServerRoles.NORMAL_PLAYER),
+                new PlayerInfo("jack", ServerRoles.NORMAL_PLAYER),
+                new PlayerInfo("ludwig", ServerRoles.NORMAL_PLAYER),
+                new PlayerInfo("jschlat", ServerRoles.NORMAL_PLAYER),
+                new PlayerInfo("andrea", ServerRoles.NORMAL_PLAYER)
+        );
     }
 
     /**
