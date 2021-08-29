@@ -76,7 +76,7 @@ public class ServerDataRepository {
     /**
      * @return if whitelist was successfully enabled
      */
-    public boolean setWhitelistEnabled(){
+    public boolean setWhitelistEnabled(boolean isEnabled){
         return true;
     }
 

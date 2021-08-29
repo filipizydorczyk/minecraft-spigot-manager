@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,8 @@ import pl.sadboifilip.minecraftspigotmanager.databinding.FragmentPlayersWhitelis
 import pl.sadboifilip.minecraftspigotmanager.ui.adapters.PlayersInfoAdapter;
 
 public class WhitelistedPlayersFragment extends Fragment {
+    private final String WHITELIST_ENABLED_CHANGE_TEXT = "Server status changed";
+
     private FragmentPlayersWhitelistedBinding binding;
     private WhitelistedPlayersViewModel viewModel;
 
@@ -43,6 +46,12 @@ public class WhitelistedPlayersFragment extends Fragment {
                 final PlayersInfoAdapter adapter =  new PlayersInfoAdapter(getActivity(), R.layout.listelement_player, players);
                 binding.listviewPlayers.setAdapter(adapter);
             }
+        });
+
+        binding.switchCompactWhitelistEnabled.setOnClickListener( e -> {
+            this.viewModel.setWhitelistedEnabled(binding.switchCompactWhitelistEnabled.isEnabled());
+            final Toast toast = Toast.makeText(getActivity(), WHITELIST_ENABLED_CHANGE_TEXT, Toast.LENGTH_SHORT);
+            toast.show();
         });
 
         return root;

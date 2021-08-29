@@ -42,6 +42,11 @@ public class WhitelistedPlayersViewModel extends AndroidViewModel {
         return this.isWhitelistedEnabled;
     }
 
+    public void setWhitelistedEnabled(boolean isEnabled){
+        this.repository.setWhitelistEnabled(isEnabled);
+        this.isWhitelistedEnabled.postValue(this.repository.isWhitelistEnabled());
+    }
+
 
     public static class WhitelistedPlayersViewModelFactory implements ViewModelProvider.Factory{
 
